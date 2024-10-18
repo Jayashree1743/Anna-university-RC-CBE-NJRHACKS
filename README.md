@@ -171,108 +171,95 @@ Quantum Detective: Cracking Financial Anomalies
     ├── Quantum Computing Potential
     ├── Scalability and Practicality
     ├── Future Outlook
-    └── Recommendations
-######Flow chart
-[03:28, 10/19/2024] ᥴꪖꪀ∂ꪗ..♡: [Start]
-    |
-    v
-[Classical Computing]
-    |
-    +--> [Libraries and Data Loading]
-    |       |
-    |       +--> Import Libraries (NumPy, Pandas, etc.)
-    |       +--> Load Dataset (creditcard.csv)
-    |
-    +--> [Initial Data Exploration]
-    |       |
-    |       +--> Display Last Rows
-    |       +--> Summary Statistics
-    |       +--> Check Missing Values
-    |       +--> Analyze Class Distribution
-    |
-    +--> [Data Visualization]
-    |       |
-    |       +--> Bar Plots (Fraud vs. Non-Fraud)
-    |       +--> Boxplot (Transaction Amounts)
-    |       +--> KDE Plots (Transaction Times)
-    |       +--> Heatmap (Feature Correlation)
-    |
-    +--> [Data Preparation]
-    |       |
-    |       +--> Split into Features (X) and Target (y)
-    |       +--> Train-Test Split (80% Train, 20% Test)
-    |       +--> Scale Amount Feature (StandardScaler)
-    |
-    +--> [Model Training]
-    |       |
-    |       +--> Train Decision Tree Classifier
-    |       +--> Make Predictions
-    |       +--> Evaluate Model (Accuracy, F1 Score, etc.)
-    |
-    +--> [XGBoost Model]
-            |
-            +--> Train XGBoost Classifier
-            +--> Evaluate Performance (Reports, Confusion Matrices)
+    └── Recommenda
+    ######Flow chart
+    # Quantum Detective Project Flowchart
 
-[Quantum Computing]
-    |
-    +--> [Library Imports]
-    |       |
-    |       +--> Import Quantum Libraries
-    |       +--> Import Data Handling Libraries
-    |
-    +--> [Data Loading and Exploration]
-    |       |
-    |       +--> Load Dataset
-    |       +--> Visualize Feature Distribution
-    |
-    +--> [Data Preparation]
-    |       |
-    |       +--> Split into Normal and Fraudulent
-    |       +--> Balance Dataset
-    |       +--> Scale Features [0, 1]
-    |       +--> Apply Zero Padding
-    |
-    +--> [Train-Test Split]
-    |       |
-    |       +--> Divide into Training and Testing Sets
-    |
-    +--> [Quantum Circuit Definition]
-    |       |
-    |       +--> Set Up Quantum Device
-    |       +--> Define Variational Circuit
-    |
-    +--> [Cost Function]
-    |       |
-    |       +--> Define Mean Squared Error
-    |
-    +--> [Model Training]
-    |       |
-    |       +--> Train Variational Quantum Classifier
-    |
-    +--> [Model Evaluation]
-            |
-            +--> Make Predictions and Evaluate
+```mermaid
+graph TD;
+    A[Start]
+    A --> B[Classical Computing]
+    
+    B --> C[Libraries and Data Loading]
+    C --> D[Import Libraries (NumPy, Pandas, etc.)]
+    C --> E[Load Dataset (creditcard.csv)]
+    
+    B --> F[Initial Data Exploration]
+    F --> G[Display Last Rows]
+    F --> H[Summary Statistics]
+    F --> I[Check Missing Values]
+    F --> J[Analyze Class Distribution]
+    
+    B --> K[Data Visualization]
+    K --> L[Bar Plots (Fraud vs. Non-Fraud)]
+    K --> M[Boxplot (Transaction Amounts)]
+    K --> N[KDE Plots (Transaction Times)]
+    K --> O[Heatmap (Feature Correlation)]
+    
+    B --> P[Data Preparation]
+    P --> Q[Split into Features (X) and Target (y)]
+    P --> R[Train-Test Split (80% Train, 20% Test)]
+    P --> S[Scale Amount Feature (StandardScaler)]
+    
+    B --> T[Model Training]
+    T --> U[Train Decision Tree Classifier]
+    T --> V[Make Predictions]
+    T --> W[Evaluate Model (Accuracy, F1 Score, etc.)]
+    
+    B --> X[XGBoost Model]
+    X --> Y[Train XGBoost Classifier]
+    X --> Z[Evaluate Performance (Reports, Confusion Matrices)]
 
-[Comparison Between Classical and Quantum]
-    |
-    +--> [Library Imports]
-    +--> [Data Generation (Synthetic Dataset)]
-    +--> [Mock Quantum Model Definition]
-    +--> [Model Evaluation (Performance Metrics)]
-    +--> [Model Comparison Visualization]
-    +--> [Main Execution Flow]
+    B --> AA[Quantum Computing]
+    
+    AA --> AB[Library Imports]
+    AB --> AC[Import Quantum Libraries]
+    AB --> AD[Import Data Handling Libraries]
+    
+    AA --> AE[Data Loading and Exploration]
+    AE --> AF[Load Dataset]
+    AE --> AG[Visualize Feature Distribution]
+    
+    AA --> AH[Data Preparation]
+    AH --> AI[Split into Normal and Fraudulent]
+    AH --> AJ[Balance Dataset]
+    AH --> AK[Scale Features [0, 1]]
+    AH --> AL[Apply Zero Padding]
+    
+    AA --> AM[Train-Test Split]
+    AM --> AN[Divide into Training and Testing Sets]
+    
+    AA --> AO[Quantum Circuit Definition]
+    AO --> AP[Set Up Quantum Device]
+    AO --> AQ[Define Variational Circuit]
+    
+    AA --> AR[Cost Function]
+    AR --> AS[Define Mean Squared Error]
+    
+    AA --> AT[Model Training]
+    AT --> AU[Train Variational Quantum Classifier]
+    
+    AA --> AV[Model Evaluation]
+    AV --> AW[Make Predictions and Evaluate]
 
-[Conclusion]
-    |
-    +--> [Effectiveness of Classical Models]
-    +--> [Quantum Computing Potential]
-    +--> [Scalability and Practicality]
-    +--> [Future Outlook]
-    +--> [Recommendations]
-    |
-    v
-[End]
+    B --> AX[Comparison Between Classical and Quantum]
+    AX --> AY[Library Imports]
+    AX --> AZ[Data Generation (Synthetic Dataset)]
+    AX --> BA[Mock Quantum Model Definition]
+    AX --> BB[Model Evaluation (Performance Metrics)]
+    AX --> BC[Model Comparison Visualization]
+    AX --> BD[Main Execution Flow]
+
+    B --> BE[Conclusion]
+    BE --> BF[Effectiveness of Classical Models]
+    BE --> BG[Quantum Computing Potential]
+    BE --> BH[Scalability and Practicality]
+    BE --> BI[Future Outlook]
+    BE --> BJ[Recommendations]
+    
+    BJ --> BK[End]
+
+
 ###### Conclusion
 - **Effectiveness of Classical Models:** Classical models, exemplified by the Decision Tree Classifier, demonstrate strong performance in fraud detection, achieving impressive metrics in accuracy, precision, recall, and F1 score. These results validate the effectiveness of traditional machine learning techniques for analyzing large, imbalanced datasets typical of credit card transactions.
 - **Quantum Computing Potential:** While the quantum model presented a theoretical framework, it suggests the promise of quantum computing in capturing complex patterns within data that classical models may overlook. However, practical applications remain constrained by current technological limitations.
