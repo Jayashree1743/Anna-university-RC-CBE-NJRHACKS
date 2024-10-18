@@ -66,6 +66,213 @@ The main() function orchestrates the overall process:
 5. Evaluates both models and compares their performance metrics.
 - **Script Execution:**
 The script checks if it is run as the main program and executes the main() function.
+###### Architetcture Model
+Quantum Detective: Cracking Financial Anomalies
+│
+├── 1. Classical Computing
+│   ├── 1.1 Libraries and Data Loading
+│   │   ├── Import Libraries (NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, XGBoost)
+│   │   └── Load Dataset (creditcard.csv) into DataFrame
+│   │
+│   ├── 1.2 Initial Data Exploration
+│   │   ├── Display Last Few Rows
+│   │   ├── Summary Statistics
+│   │   ├── Info about the Dataset
+│   │   ├── Check for Missing Values
+│   │   └── Class Distribution Analysis
+│   │
+│   ├── 1.3 Data Visualization
+│   │   ├── Bar Plots for Class Distribution
+│   │   ├── Boxplot for Transaction Amounts
+│   │   ├── KDE Plots for Transaction Times
+│   │   └── Heatmap for Feature Correlation
+│   │
+│   ├── 1.4 Data Preparation
+│   │   ├── Split Data into Features (X) and Target (y)
+│   │   ├── Train-Test Split (80% train, 20% test)
+│   │   └── Scale Amount Feature using StandardScaler
+│   │
+│   ├── 1.5 Model Training
+│   │   ├── Train Decision Tree Classifier
+│   │   ├── Make Predictions on Test Set
+│   │   ├── Evaluate Model Performance
+│   │   │   ├── Accuracy
+│   │   │   ├── F1 Score
+│   │   │   └── Confusion Matrix
+│   │   └── Draw ROC Curves for Training and Test Sets
+│   │
+│   └── 1.6 XGBoost Model
+│       ├── Train XGBoost Classifier
+│       ├── Evaluate Performance
+│       └── Print Classification Reports and Confusion Matrices
+│
+├── 2. Quantum Computing
+│   ├── 2.1 Library Imports
+│   │   ├── Import Quantum Libraries (e.g., Qiskit, PennyLane)
+│   │   ├── Data Handling Libraries (NumPy, Pandas)
+│   │   └── Visualization Libraries (Matplotlib)
+│   │
+│   ├── 2.2 Data Loading and Exploration
+│   │   ├── Load Credit Card Dataset
+│   │   └── Visualize Feature Distribution and Correlations
+│   │
+│   ├── 2.3 Data Preparation
+│   │   ├── Split Data into Normal and Fraudulent Transactions
+│   │   ├── Balance Dataset by Sampling
+│   │   ├── Scale Features to [0, 1]
+│   │   └── Apply Zero Padding (if needed)
+│   │
+│   ├── 2.4 Train-Test Split
+│   │   └── Divide Dataset for Model Evaluation
+│   │
+│   ├── 2.5 Quantum Circuit Definition
+│   │   ├── Setup Quantum Device
+│   │   ├── Define Variational Circuit
+│   │   └── Encode Classical Data into Quantum States
+│   │
+│   ├── 2.6 Cost Function
+│   │   └── Define Cost Function (Mean Squared Error)
+│   │
+│   ├── 2.7 Model Training
+│   │   ├── Use Optimizer to Train Quantum Classifier
+│   │   └── Update Parameters Based on Cost Function
+│   │
+│   └── 2.8 Model Evaluation
+│       ├── Make Predictions on Test Set
+│       └── Evaluate Classifier Performance (Accuracy, Classification Report)
+│
+├── 3. Comparison Between Classical and Quantum
+│   ├── 3.1 Library Imports
+│   │   ├── Import Libraries for Evaluation (NumPy, Pandas, Scikit-learn)
+│   │   └── Import Matplotlib for Visualization
+│   │
+│   ├── 3.2 Data Generation
+│   │   └── Create Synthetic Dataset for Comparison
+│   │
+│   ├── 3.3 Mock Quantum Model
+│   │   ├── Define MockQuantumModel Class
+│   │   ├── Implement Fit, Predict, and Predict_Proba Methods
+│   │   └── Simulate Quantum Model Behavior
+│   │
+│   ├── 3.4 Model Evaluation
+│   │   └── Calculate Performance Metrics (Accuracy, Precision, Recall, F1 Score, AUC)
+│   │
+│   ├── 3.5 Model Comparison Visualization
+│   │   └── Create Bar Chart Comparing Classical and Quantum Model Metrics
+│   │
+│   └── 3.6 Main Execution Flow
+│       ├── Load Synthetic Data
+│       ├── Split and Scale Data
+│       ├── Train Classical and Mock Quantum Models
+│       └── Evaluate and Compare Model Performance
+│
+└── 4. Conclusion
+    ├── Effectiveness of Classical Models
+    ├── Quantum Computing Potential
+    ├── Scalability and Practicality
+    ├── Future Outlook
+    └── Recommendations
+######Flow chart
+[03:28, 10/19/2024] ᥴꪖꪀ∂ꪗ..♡: [Start]
+    |
+    v
+[Classical Computing]
+    |
+    +--> [Libraries and Data Loading]
+    |       |
+    |       +--> Import Libraries (NumPy, Pandas, etc.)
+    |       +--> Load Dataset (creditcard.csv)
+    |
+    +--> [Initial Data Exploration]
+    |       |
+    |       +--> Display Last Rows
+    |       +--> Summary Statistics
+    |       +--> Check Missing Values
+    |       +--> Analyze Class Distribution
+    |
+    +--> [Data Visualization]
+    |       |
+    |       +--> Bar Plots (Fraud vs. Non-Fraud)
+    |       +--> Boxplot (Transaction Amounts)
+    |       +--> KDE Plots (Transaction Times)
+    |       +--> Heatmap (Feature Correlation)
+    |
+    +--> [Data Preparation]
+    |       |
+    |       +--> Split into Features (X) and Target (y)
+    |       +--> Train-Test Split (80% Train, 20% Test)
+    |       +--> Scale Amount Feature (StandardScaler)
+    |
+    +--> [Model Training]
+    |       |
+    |       +--> Train Decision Tree Classifier
+    |       +--> Make Predictions
+    |       +--> Evaluate Model (Accuracy, F1 Score, etc.)
+    |
+    +--> [XGBoost Model]
+            |
+            +--> Train XGBoost Classifier
+            +--> Evaluate Performance (Reports, Confusion Matrices)
+
+[Quantum Computing]
+    |
+    +--> [Library Imports]
+    |       |
+    |       +--> Import Quantum Libraries
+    |       +--> Import Data Handling Libraries
+    |
+    +--> [Data Loading and Exploration]
+    |       |
+    |       +--> Load Dataset
+    |       +--> Visualize Feature Distribution
+    |
+    +--> [Data Preparation]
+    |       |
+    |       +--> Split into Normal and Fraudulent
+    |       +--> Balance Dataset
+    |       +--> Scale Features [0, 1]
+    |       +--> Apply Zero Padding
+    |
+    +--> [Train-Test Split]
+    |       |
+    |       +--> Divide into Training and Testing Sets
+    |
+    +--> [Quantum Circuit Definition]
+    |       |
+    |       +--> Set Up Quantum Device
+    |       +--> Define Variational Circuit
+    |
+    +--> [Cost Function]
+    |       |
+    |       +--> Define Mean Squared Error
+    |
+    +--> [Model Training]
+    |       |
+    |       +--> Train Variational Quantum Classifier
+    |
+    +--> [Model Evaluation]
+            |
+            +--> Make Predictions and Evaluate
+
+[Comparison Between Classical and Quantum]
+    |
+    +--> [Library Imports]
+    +--> [Data Generation (Synthetic Dataset)]
+    +--> [Mock Quantum Model Definition]
+    +--> [Model Evaluation (Performance Metrics)]
+    +--> [Model Comparison Visualization]
+    +--> [Main Execution Flow]
+
+[Conclusion]
+    |
+    +--> [Effectiveness of Classical Models]
+    +--> [Quantum Computing Potential]
+    +--> [Scalability and Practicality]
+    +--> [Future Outlook]
+    +--> [Recommendations]
+    |
+    v
+[End]
 ###### Conclusion
 - **Effectiveness of Classical Models:** Classical models, exemplified by the Decision Tree Classifier, demonstrate strong performance in fraud detection, achieving impressive metrics in accuracy, precision, recall, and F1 score. These results validate the effectiveness of traditional machine learning techniques for analyzing large, imbalanced datasets typical of credit card transactions.
 - **Quantum Computing Potential:** While the quantum model presented a theoretical framework, it suggests the promise of quantum computing in capturing complex patterns within data that classical models may overlook. However, practical applications remain constrained by current technological limitations.
