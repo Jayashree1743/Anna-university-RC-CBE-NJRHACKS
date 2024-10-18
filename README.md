@@ -82,11 +82,11 @@ Quantum Detective: Cracking Financial Anomalies
 │   │   └── Class Distribution Analysis  
 │   │  
 │   ├── 1.3 Data Visualization  
-│   │   ├── Bar Plots for Class Distribution
-│   │   ├── Boxplot for Transaction Amounts
-│   │   ├── KDE Plots for Transaction Times
-│   │   └── Heatmap for Feature Correlation
-│   │
+│   │   ├── Bar Plots for Class Distribution  
+│   │   ├── Boxplot for Transaction Amounts  
+│   │   ├── KDE Plots for Transaction Times  
+│   │   └── Heatmap for Feature Correlation  
+│   │  
 │   ├── 1.4 Data Preparation  
 │   │   ├── Split Data into Features (X) and Target (y)  
 │   │   ├── Train-Test Split (80% train, 20% test)  
