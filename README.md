@@ -10,18 +10,41 @@
   
 ## Instructions on running your project
 >Instructions on running our project
-- **Import Libraries:** The code begins by importing necessary libraries for data manipulation (NumPy, Pandas), machine learning preprocessing and evaluation (Scikit-learn), and quantum computing (Qiskit). 
--  **Load and Sample the Dataset:** The dataset is loaded from a CSV file into a DataFrame.
-A random sample of 1000 data points is taken from the dataset to ensure the size is manageable for quantum processing.
-- **Separate Features and Labels:** Features (input variables) and labels (target variable) are separated. The target variable indicates whether a transaction is fraudulent or not.
-- **Feature Scaling:** The features are standardized using StandardScaler to normalize their values, which is important for effective model training.
-- **Train-Test Split:** The dataset is split into training and testing sets (80% for training, 20% for testing) to evaluate the model's performance.
-- **Define the Quantum Feature Map:** A quantum feature map (ZZFeatureMap) is created to transform classical data into a quantum representation. This maps the input features into a quantum state.
-- **Set Up Quantum Instance:** A quantum instance is defined using a simulator backend (in this case, the qasm_simulator), specifying the number of shots (repetitions) for measurement accuracy.
-- **Create the Quantum Kernel:** A quantum kernel is initialized with the defined feature map and quantum instance. This kernel will facilitate the training of the QSVM.
-- **Initialize and Train the QSVM Model:** An instance of the QSVM is created using the quantum kernel, and the model is trained on the training data.
-- **Model Testing:** The trained QSVM model is used to make predictions on the test set.
-- **Model Evaluation:** The performance of the QSVM is evaluated using a classification report that provides metrics such as precision, recall, and F1-score.
+###### Classical Computing
+- **Libraries and Data Loading:**
+1. Imports necessary libraries such as NumPy, Pandas, Matplotlib, Seaborn, and various machine learning algorithms from Scikit-learn and XGBoost.
+2. Loads the dataset (creditcard.csv) into a Pandas DataFrame.
+- **Initial Data Exploration:**
+1. Displays the last few rows, summary statistics, and info about the dataset.
+2. Checks for missing values and computes the percentage of null entries in each column.
+3. Analyzes the distribution of classes (fraudulent vs. non-fraudulent transactions).
+- **Data Visualization:**
+1. Creates bar plots to visualize the number and percentage of fraudulent vs. non-fraudulent transactions.
+2. Displays a boxplot to explore the distribution of transaction amounts.
+3. Uses kernel density estimation (KDE) plots to compare transaction times for both classes.
+4. Generates a heatmap to visualize the correlation matrix of features.
+- **Data Preparation:**
+1. Splits the data into features (X) and target variable (y).
+2. Performs a train-test split, with 80% of the data for training and 20% for testing.
+3. Scales the Amount feature using StandardScaler.
+- **Model Training:**
+1. Trains a Decision Tree classifier on the training set.
+2. Makes predictions on the test set and evaluates the model using metrics such as accuracy, F1 score, and a confusion matrix.
+3. Draws ROC curves for both training and test sets to visualize model performance.
+- **XGBoost Model:**
+1. Trains an XGBoost classifier and evaluates its performance similarly.
+2. Prints classification reports and confusion matrices for comparison.  
+###### Quantum Computing
+- **Library Imports:** Imports essential libraries for data handling, visualization, machine learning, and quantum computing.
+- **Data Loading and Exploration:** Loads a credit card dataset and visualizes the distribution of features and their correlations.
+- **Data Preparation:** Splits the dataset into normal and fraudulent transactions.
+Balances the dataset by sampling equal numbers of normal and fraudulent cases.
+  the features to the range [0, 1] and applies zero padding to ensure the number of features is a power of 2.
+- **Train-Test Split:** Divides the dataset into training and testing sets for model evaluation.
+- **Quantum Circuit Definition:** Sets up a quantum device and defines a variational circuit using a feature map and parameterized gates to encode classical data into quantum states.
+- **Cost Function:** Defines a cost function to compute the mean squared error between the predicted and actual labels.
+- **Model Training:** Uses an optimizer to train the variational quantum classifier over multiple epochs, updating the parameters based on the cost function.
+- **Model Evaluation:** Makes predictions on the test set and evaluates the classifier's performance using accuracy and a classification report.
 
 ## References
 1. "Qiskit: An Open-source Quantum Computing Framework." Retrieved from [Qiskit](https://learning.quantum.ibm.com/)
