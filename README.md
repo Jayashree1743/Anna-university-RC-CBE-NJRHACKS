@@ -47,7 +47,7 @@ Training set:
 This project demonstrates the effectiveness of machine learning  techniques in detecting fraudulent credit card transactions. The use of the desicion tree and XGBOOST technique significantly improves the detection of fraudulent transactions, making the system robust and reliable for real-time updates.
 
   
-###### Quantum Computing
+## Quantum Computing
 - **Library Imports:** Imports essential libraries for data handling, visualization, machine learning, and quantum computing.
 - **Data Loading and Exploration:** Loads a credit card dataset and visualizes the distribution of features and their correlations.
 - **Data Preparation:** Splits the dataset into normal and fraudulent transactions.
@@ -58,7 +58,7 @@ Balances the dataset by sampling equal numbers of normal and fraudulent cases.
 - **Cost Function:** Defines a cost function to compute the mean squared error between the predicted and actual labels.
 - **Model Training:** Uses an optimizer to train the variational quantum classifier over multiple epochs, updating the parameters based on the cost function.
 - **Model Evaluation:** Makes predictions on the test set and evaluates the classifier's performance using accuracy and a classification report.
-  ###### Comparision between classical and quantum
+  ## Comparision between classical and quantum
 - **Library Imports:**
 1. Imports necessary libraries such as NumPy, Pandas, and Scikit-learn for machine learning and evaluation metrics.
 2. Imports Matplotlib for visualization and Joblib for model saving (though it's not used in the code).
@@ -79,7 +79,7 @@ The main() function orchestrates the overall process:
 5. Evaluates both models and compares their performance metrics.
 - **Script Execution:**
 The script checks if it is run as the main program and executes the main() function.
-###### Architetcture Model
+## Architetcture Model
 quantum detective:cracking financial anomalies
 Here's a simplified geometric representation of your project structure, focusing on the main components without excessive detail:
 
