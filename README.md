@@ -11,29 +11,42 @@
 ## Instructions on running your project
 >Instructions on running our project
 ###### Classical Computing
-- **Libraries and Data Loading:**
-1. Imports necessary libraries such as NumPy, Pandas, Matplotlib, Seaborn, and various machine learning algorithms from Scikit-learn and XGBoost.
-2. Loads the dataset (creditcard.csv) into a Pandas DataFrame.
-- **Initial Data Exploration:**
-1. Displays the last few rows, summary statistics, and info about the dataset.
-2. Checks for missing values and computes the percentage of null entries in each column.
-3. Analyzes the distribution of classes (fraudulent vs. non-fraudulent transactions).
-- **Data Visualization:**
-1. Creates bar plots to visualize the number and percentage of fraudulent vs. non-fraudulent transactions.
-2. Displays a boxplot to explore the distribution of transaction amounts.
-3. Uses kernel density estimation (KDE) plots to compare transaction times for both classes.
-4. Generates a heatmap to visualize the correlation matrix of features.
-- **Data Preparation:**
-1. Splits the data into features (X) and target variable (y).
-2. Performs a train-test split, with 80% of the data for training and 20% for testing.
-3. Scales the Amount feature using StandardScaler.
-- **Model Training:**
-1. Trains a Decision Tree classifier on the training set.
-2. Makes predictions on the test set and evaluates the model using metrics such as accuracy, F1 score, and a confusion matrix.
-3. Draws ROC curves for both training and test sets to visualize model performance.
-- **XGBoost Model:**
-1. Trains an XGBoost classifier and evaluates its performance similarly.
-2. Prints classification reports and confusion matrices for comparison.  
+#### Overview
+In this notebook, exploring various Machine Learning models to detect fraudulent use of credit cards. and comparing each model's performance and results. The best performance is achieved using the XGBOOST technique.
+#### Techniques Used in the Project
+The project compares the results of different techniques:
+
+#### Machine Learning Techniques
+Decision Trees
+XGBOOST
+
+#### Note about Random Forest and Decision Tree Models:
+Decision Tree: Built on an entire dataset using all features/variables. You can easily overfit the data, so it is recommended to use cross-validation. Advantages: easy to interpret, clear understanding of the variable and value used for splitting data and predicting outcomes.
+
+XGBOOST: XGBoost is an efficient and scalable implementation of gradient boosting framework, designed for speed and performance. It builds an ensemble of decision trees one at a time, where each new tree corrects the errors made by the previously built trees.
+
+#### Result
+TEST RESULTS
+test set:
+Accuracy: 0.99
+    Sensitivity (Recall): 0.72
+    Specificity: 0.99
+    F1-Score: 0.71
+    ROC-AUC: 0.97
+
+Training set:
+    Accuracy: 1.0
+    Sensitivity (Recall): 1.0
+    Specificity: 1.0
+    F1-Score: 1.0
+    ROC-AUC: 1.0
+
+
+##### Conclusion
+
+This project demonstrates the effectiveness of machine learning  techniques in detecting fraudulent credit card transactions. The use of the desicion tree and XGBOOST technique significantly improves the detection of fraudulent transactions, making the system robust and reliable for real-time updates.
+
+  
 ###### Quantum Computing
 - **Library Imports:** Imports essential libraries for data handling, visualization, machine learning, and quantum computing.
 - **Data Loading and Exploration:** Loads a credit card dataset and visualizes the distribution of features and their correlations.
@@ -67,111 +80,71 @@ The main() function orchestrates the overall process:
 - **Script Execution:**
 The script checks if it is run as the main program and executes the main() function.
 ###### Architetcture Model
-Quantum Detective: Cracking Financial Anomalies
-│  
-├── 1. Classical Computing  
-│   ├── 1.1 Libraries and Data Loading  
-│   │   ├── Import Libraries (NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, XGBoost)  
-│   │   └── Load Dataset (creditcard.csv) into DataFrame  
-│   │  
-│   ├── 1.2 Initial Data Exploration  
-│   │   ├── Display Last Few Rows  
-│   │   ├── Summary Statistics  
-│   │   ├── Info about the Dataset  
-│   │   ├── Check for Missing Values  
-│   │   └── Class Distribution Analysis  
-│   │  
-│   ├── 1.3 Data Visualization  
-│   │   ├── Bar Plots for Class Distribution  
-│   │   ├── Boxplot for Transaction Amounts  
-│   │   ├── KDE Plots for Transaction Times  
-│   │   └── Heatmap for Feature Correlation  
-│   │  
-│   ├── 1.4 Data Preparation  
-│   │   ├── Split Data into Features (X) and Target (y)  
-│   │   ├── Train-Test Split (80% train, 20% test)  
-│   │   └── Scale Amount Feature using StandardScaler  
-│   │  
-│   ├── 1.5 Model Training   
-│   │   ├── Train Decision Tree Classifier  
-│   │   ├── Make Predictions on Test Set  
-│   │   ├── Evaluate Model Performance  
-│   │   │   ├── Accuracy  
-│   │   │   ├── F1 Score  
-│   │   │   └── Confusion Matrix  
-│   │   └── Draw ROC Curves for Training and Test Sets  
-│   │  
-│   └── 1.6 XGBoost Model  
-│       ├── Train XGBoost Classifier  
-│       ├── Evaluate Performance  
-│       └── Print Classification Reports and Confusion Matrices  
-│  
-├── 2. Quantum Computing  
-│   ├── 2.1 Library Imports  
-│   │   ├── Import Quantum Libraries (e.g., Qiskit, PennyLane)  
-│   │   ├── Data Handling Libraries (NumPy, Pandas)  
-│   │   └── Visualization Libraries (Matplotlib)  
-│   │
-│   ├── 2.2 Data Loading and Exploration  
-│   │   ├── Load Credit Card Dataset  
-│   │   └── Visualize Feature Distribution and Correlations  
-│   │  
-│   ├── 2.3 Data Preparation  
-│   │   ├── Split Data into Normal and Fraudulent Transactions  
-│   │   ├── Balance Dataset by Sampling  
-│   │   ├── Scale Features to [0, 1]  
-│   │   └── Apply Zero Padding (if needed)  
-│   │  
-│   ├── 2.4 Train-Test Split  
-│   │   └── Divide Dataset for Model Evaluation  
-│   │  
-│   ├── 2.5 Quantum Circuit Definition  
-│   │   ├── Setup Quantum Device  
-│   │   ├── Define Variational Circuit  
-│   │   └── Encode Classical Data into Quantum States  
-│   │  
-│   ├── 2.6 Cost Function  
-│   │   └── Define Cost Function (Mean Squared Error)  
-│   │  
-│   ├── 2.7 Model Training  
-│   │   ├── Use Optimizer to Train Quantum Classifier  
-│   │   └── Update Parameters Based on Cost Function  
-│   │  
-│   └── 2.8 Model Evaluation  
-│       ├── Make Predictions on Test Set  
-│       └── Evaluate Classifier Performance (Accuracy, Classification Report)  
-│  
-├── 3. Comparison Between Classical and Quantum  
-│   ├── 3.1 Library Imports   
-│   │   ├── Import Libraries for Evaluation (NumPy, Pandas, Scikit-learn)  
-│   │   └── Import Matplotlib for Visualization  
-│   │  
-│   ├── 3.2 Data Generation  
-│   │   └── Create Synthetic Dataset for Comparison  
-│   │  
-│   ├── 3.3 Mock Quantum Model  
-│   │   ├── Define MockQuantumModel Class  
-│   │   ├── Implement Fit, Predict, and Predict_Proba Methods  
-│   │   └── Simulate Quantum Model Behavior  
-│   │  
-│   ├── 3.4 Model Evaluation  
-│   │   └── Calculate Performance Metrics (Accuracy, Precision, Recall, F1 Score, AUC)  
-│   │  
-│   ├── 3.5 Model Comparison Visualization  
-│   │   └── Create Bar Chart Comparing Classical and Quantum Model Metrics  
-│   │  
-│   └── 3.6 Main Execution Flow  
-│       ├── Load Synthetic Data  
-│       ├── Split and Scale Data  
-│       ├── Train Classical and Mock Quantum Models  
-│       └── Evaluate and Compare Model Performance  
-│  
-└── 4. Conclusion  
-    ├── Effectiveness of Classical Models  
-    ├── Quantum Computing Potential  
-    ├── Scalability and Practicality  
-    ├── Future Outlook  
-    └── Recommendations
+quantum detective:cracking financial anomalies
+Here's a simplified geometric representation of your project structure, focusing on the main components without excessive detail:
+
+### Simplified Geometric Representation
+
+
+┌────────────────────┐
+│     Start          │
+└──────────┬─────────┘
+           ▼
+┌────────────────────┐
+│   Classical        │
+│   Computing        │
+└──────────┬─────────┘
+           ▼
+┌────────────────────┐
+│   Data             │
+│   Exploration      │
+└──────────┬─────────┘
+           ▼
+┌────────────────────┐
+│   Data             │
+│   Visualization     │
+└──────────┬─────────┘
+           ▼
+┌────────────────────┐
+│   Data             │
+│   Preparation      │
+└──────────┬─────────┘
+           ▼
+┌────────────────────┐
+│   Model            │
+│   Training         │
+└──────────┬─────────┘
+           ▼
+┌────────────────────┐
+│   Quantum          │
+│   Computing        │
+└──────────┬─────────┘
+           ▼
+┌────────────────────┐
+│   Data             │
+│   Preparation      │
+└──────────┬─────────┘
+           ▼
+┌────────────────────┐
+│   Model            │
+│   Training         │
+└──────────┬─────────┘
+           ▼
+┌────────────────────┐
+│   Comparison       │
+│   of Models        │
+└──────────┬─────────┘
+           ▼
+┌────────────────────┐
+│   Conclusion       │
+└────────────────────┘
+
+
+### Key Features of this Simplified Representation:
+- **High-Level Structure**: Focuses on essential sections of your project without diving into subcomponents.
+- **Clear Flow**: Arrows indicate the progression from one main category to another, making it easy to understand the sequence of tasks.
+- **Balanced Sections**: Both classical and quantum computing components are represented, emphasizing their importance in the overall project.
+
 ###### Conclusion
 - **Effectiveness of Classical Models:** Classical models, exemplified by the Decision Tree Classifier, demonstrate strong performance in fraud detection, achieving impressive metrics in accuracy, precision, recall, and F1 score. These results validate the effectiveness of traditional machine learning techniques for analyzing large, imbalanced datasets typical of credit card transactions.
 - **Quantum Computing Potential:** While the quantum model presented a theoretical framework, it suggests the promise of quantum computing in capturing complex patterns within data that classical models may overlook. However, practical applications remain constrained by current technological limitations.
@@ -184,3 +157,4 @@ Quantum Detective: Cracking Financial Anomalies
 2. "PennyLane: A Python Library for Quantum Machine Learning." Retrieved from [PennyLane](https://pennylane.ai/)
 3. "Credit Card Fraud Detection." Kaggle Dataset retrieved from [kaggle](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
 4. "Quantum Computing for Financial Applications: A Survey," IEEE Quantum Electronics[DOI:10.1109/QE.2022.09915517](https://www.computer.org/csdl/journal/qe/2022/01/09915517/1HmgdJyXCqQ)
+5.  "youtube"
