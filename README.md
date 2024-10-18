@@ -1,9 +1,10 @@
 ## College Name - Team Name
-Anna University Regional Campus Coimbatore 
+**College Name :** Anna University Regional Campus Coimbatore 
+**Team Name :** NJRHACKS
 
 ## Problem Statement
-Provide description of which Theme and Problem statement you are attempting
-
+**Theme:** Quantum Computing
+  *Quantum Detective:Cracking Financial Anomalies*
 ## Instructions on running your project
 Provide detailed steps to get your project up and running, including any dependencies
 
