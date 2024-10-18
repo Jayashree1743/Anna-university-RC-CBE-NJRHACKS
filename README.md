@@ -145,7 +145,7 @@ Here's a simplified geometric representation of your project structure, focusing
 - **Clear Flow**: Arrows indicate the progression from one main category to another, making it easy to understand the sequence of tasks.
 - **Balanced Sections**: Both classical and quantum computing components are represented, emphasizing their importance in the overall project.
 
-###### Conclusion
+#### Conclusion
 - **Effectiveness of Classical Models:** Classical models, exemplified by the Decision Tree Classifier, demonstrate strong performance in fraud detection, achieving impressive metrics in accuracy, precision, recall, and F1 score. These results validate the effectiveness of traditional machine learning techniques for analyzing large, imbalanced datasets typical of credit card transactions.
 - **Quantum Computing Potential:** While the quantum model presented a theoretical framework, it suggests the promise of quantum computing in capturing complex patterns within data that classical models may overlook. However, practical applications remain constrained by current technological limitations.
 - **Scalability and Practicality:** Classical machine learning models excel in scalability and efficiency, making them highly suitable for real-time fraud detection systems. Conversely, quantum computing faces challenges such as noise, qubit coherence, and the need for further refinement of algorithms to effectively handle large-scale data.
