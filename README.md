@@ -9,7 +9,7 @@
   Goal : To design the quantum model that demonstrates improvement in Speed ,Scalability and Accuracy when compared to Classical methods .
   
 ## Instructions on running your project
-Provide detailed steps to get your project up and running, including any dependencies
+>Instructions on running our project
 
 ## References
 
