@@ -8,9 +8,9 @@
   Traditional Machine Learning Models often face challenges like fraudlent activities,unusual anomolies due to their size and complexity resulting in less accurate result and slower processing .To overcome  these challenges we use quantum properties to analyse  large dataset more efficiently.  
   Goal : To design the quantum model that demonstrates improvement in Speed ,Scalability and Accuracy when compared to Classical methods .
   
-## Instructions on running your project
+### Instructions on running your project
 >Instructions on running our project
-###### Classical Computing
+#### Classical Computing
 #### Overview
 In this notebook, exploring various Machine Learning models to detect fraudulent use of credit cards. and comparing each model's performance and results. The best performance is achieved using the XGBOOST technique.
 #### Techniques Used in the Project
@@ -20,12 +20,12 @@ The project compares the results of different techniques:
 Decision Trees
 XGBOOST
 
-#### Note about Random Forest and Decision Tree Models:
+### Note about Random Forest and Decision Tree Models:
 Decision Tree: Built on an entire dataset using all features/variables. You can easily overfit the data, so it is recommended to use cross-validation. Advantages: easy to interpret, clear understanding of the variable and value used for splitting data and predicting outcomes.
 
 XGBOOST: XGBoost is an efficient and scalable implementation of gradient boosting framework, designed for speed and performance. It builds an ensemble of decision trees one at a time, where each new tree corrects the errors made by the previously built trees.
 
-#### Result
+###  Result
 TEST RESULTS
 test set:
 Accuracy: 0.99
@@ -145,7 +145,7 @@ Here's a simplified geometric representation of your project structure, focusing
 - **Clear Flow**: Arrows indicate the progression from one main category to another, making it easy to understand the sequence of tasks.
 - **Balanced Sections**: Both classical and quantum computing components are represented, emphasizing their importance in the overall project.
 
-#### Conclusion
+### Conclusion
 - **Effectiveness of Classical Models:** Classical models, exemplified by the Decision Tree Classifier, demonstrate strong performance in fraud detection, achieving impressive metrics in accuracy, precision, recall, and F1 score. These results validate the effectiveness of traditional machine learning techniques for analyzing large, imbalanced datasets typical of credit card transactions.
 - **Quantum Computing Potential:** While the quantum model presented a theoretical framework, it suggests the promise of quantum computing in capturing complex patterns within data that classical models may overlook. However, practical applications remain constrained by current technological limitations.
 - **Scalability and Practicality:** Classical machine learning models excel in scalability and efficiency, making them highly suitable for real-time fraud detection systems. Conversely, quantum computing faces challenges such as noise, qubit coherence, and the need for further refinement of algorithms to effectively handle large-scale data.
