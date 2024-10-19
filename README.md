@@ -1,6 +1,7 @@
 ## College Name - Team Name
 **College Name :** Anna University Regional Campus Coimbatore   
 **Team Name :** NJRHACKS
+##JAYASREE S,RUBIHA J,NAVIN G
 
 ## Problem Statement
 **Theme:** Quantum Computing  
