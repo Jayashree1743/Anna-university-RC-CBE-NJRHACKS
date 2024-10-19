@@ -85,21 +85,20 @@ Here's a simplified geometric representation of your project structure, focusing
 
 ### Simplified Geometric Representation
 
-
-┌────────────────────┐
-│     Start          │
-└──────────┬─────────┘
-           ▼
-┌────────────────────┐
-│   Classical        │
-│   Computing        │
-└──────────┬─────────┘
-           ▼
-┌────────────────────┐
-│   Data             │
-│   Exploration      │
-└──────────┬─────────┘
-           ▼
+┌────────────────────┐  
+│     Start          │  
+└──────────┬─────────┘  
+           ▼  
+┌────────────────────┐  
+│   Classical        │  
+│   Computing        │  
+└──────────┬─────────┘  
+           ▼  
+┌────────────────────┐  
+│   Data             │  
+│   Exploration      │  
+└──────────┬─────────┘  
+           ▼  
 ┌────────────────────┐
 │   Data             │
 │   Visualization     │
