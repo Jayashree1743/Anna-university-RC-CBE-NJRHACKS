@@ -85,58 +85,40 @@ Here's a simplified geometric representation of your project structure, focusing
 
 ### Simplified Geometric Representation
 
-┌────────────────────┐  
-│     Start          │  
-└──────────┬─────────┘  
-           ▼  
-┌────────────────────┐  
-│   Classical        │  
-│   Computing        │  
-└──────────┬─────────┘  
-           ▼  
-┌────────────────────┐  
-│   Data             │  
-│   Exploration      │  
-└──────────┬─────────┘  
-           ▼  
-┌────────────────────┐
-│   Data             │
-│   Visualization     │
-└──────────┬─────────┘
-           ▼
-┌────────────────────┐
-│   Data             │
-│   Preparation      │
-└──────────┬─────────┘
-           ▼
-┌────────────────────┐
-│   Model            │
-│   Training         │
-└──────────┬─────────┘
-           ▼
-┌────────────────────┐
-│   Quantum          │
-│   Computing        │
-└──────────┬─────────┘
-           ▼
-┌────────────────────┐
-│   Data             │
-│   Preparation      │
-└──────────┬─────────┘
-           ▼
-┌────────────────────┐
-│   Model            │
-│   Training         │
-└──────────┬─────────┘
-           ▼
-┌────────────────────┐
-│   Comparison       │
-│   of Models        │
-└──────────┬─────────┘
-           ▼
-┌────────────────────┐
-│   Conclusion       │
-└────────────────────┘
+
+Sure! Here’s the flowchart representation using only text and arrow marks, without boxes:
+
+Start
+   |
+   ▼
+Classical Computing
+   |
+   ▼
+Data Exploration
+   |
+   ▼
+Data Visualization
+   |
+   ▼
+Data Preparation
+   |
+   ▼
+Model Training
+   |
+   ▼
+Quantum Computing
+   |
+   ▼
+Data Preparation
+   |
+   ▼
+Model Training
+   |
+   ▼
+Comparison of Models
+   |
+   ▼
+Conclusion
 
 
 ### Key Features of this Simplified Representation:
